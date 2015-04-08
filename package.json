@@ -1,0 +1,47 @@
+{
+  "name": "gulp-file-summary",
+  "version": "1.0.0",
+  "description": "Get a summary of all the files",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "mocha -w -d -R spec",
+    "test": "mocha -R spec",
+    "cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "covSave": "coveralls < coverage/lcov.info"
+  },
+  "homepage": "https://github.com/germanrio/gulp-file-summary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germanrio/gulp-file-summary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/germanrio/gulp-file-summary/issues"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "summary"
+  ],
+  "author": {
+    "name": "German RIO",
+    "email": "german@germanrio.es",
+    "url": "http://www.germanrio.es"
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.13",
+    "mocha": "^2.2.4",
+    "stream-array": "^1.0.1",
+    "stream-assert": "^2.0.2"
+  }
+}
