@@ -1,7 +1,7 @@
 {
   "name": "gulp-file-summary",
   "version": "1.0.0",
-  "description": "Get a summary of all the files",
+  "description": "Gulp plugin to get a summary of all the files",
   "main": "lib/index.js",
   "scripts": {
     "start": "mocha -w -d -R spec",
