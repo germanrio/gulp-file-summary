@@ -8,15 +8,11 @@ var summary = require('../lib'),
     PluginError = gutil.PluginError,
     File = gutil.File;
 
-// var gulp = require('gulp');
-
-var examples = function (glob) { return path.join(__dirname, 'examples', glob); }
-
 describe('gulp-file-summary', function () {
   describe('summary()', function () {
     it('should throw, when arguments is missing', function () {
       expect(summary).to.throw('Missing filename option for gulp-file-summary');
-      expect(summary.bind(null, {})).to.throw('Missing filename option for gulp-file-summary');
+      expect(summary.bind(null, {})).to.throw('Missing filename');
     });
 
     it('should ignore null files', function (done) {
@@ -35,11 +31,11 @@ describe('gulp-file-summary', function () {
       stream.end();
     });
 
-    it.skip('should emit error on streamed file', function (done) {
-      gulp.src(examples('*'), { buffer: false })
-        .pipe(concat({filename: 'test.js'}))
+    it('should emit error on streamed file', function (done) {
+      test(true, 'one', 'two')
+        .pipe(summary({filename: 'test.js'}))
         .on('error', function (err) {
-          err.message.should.eql('Streaming not supported');
+          expect(err.message).to.be.equal('Streaming not supported');
           done();
         });
     });
