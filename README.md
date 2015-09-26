@@ -1,12 +1,17 @@
 # Gulp file summary
 
-[![Build Status][travisImg]][travisUrl] [![Coverage Status][coverallsImg]][coverallsUrl]
+[![Build Status][travisImg]][travisUrl]
+[![Coverage Status][coverallsImg]][coverallsUrl]
+[![NPM Version][npmImg]][npmUrl]
 
 [travisImg]: https://travis-ci.org/germanrio/gulp-file-summary.svg?branch=master
 [travisUrl]: https://travis-ci.org/germanrio/gulp-file-summary
 
 [coverallsImg]: https://img.shields.io/coveralls/germanrio/gulp-file-summary.svg
 [coverallsUrl]: https://coveralls.io/r/germanrio/gulp-file-summary
+
+[npmImg]: https://img.shields.io/npm/v/gulp-file-summary.svg
+[npmUrl]: https://npmjs.org/package/gulp-file-summary
 
 This plugin allows to create a **summary file** with the **absolute paths** of the files in the gulp pipe. It can be useful to create the list of files needed to be loaded for other tasks, e.g. tests.
 
